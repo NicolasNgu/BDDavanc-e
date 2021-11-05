@@ -59,10 +59,10 @@ drop sequence adr_seq;
 create sequence adr_seq start with 1;
 
 create or replace trigger adresse_bir
-before insert on adresse 
-for each row 
+before insert on adresse
+for each row
 
-begin 
+begin
     select adr_seq.NEXTVAL
     into :new.id
     from dual;
@@ -89,10 +89,10 @@ drop sequence cli_seq;
 create sequence cli_seq start with 1;
 
 create or replace trigger client_bir
-before insert on client 
-for each row 
+before insert on client
+for each row
 
-begin 
+begin
     select cli_seq.NEXTVAL
     into :new.id
     from dual;
@@ -129,10 +129,10 @@ drop sequence cont_seq;
 create sequence cont_seq start with 1;
 
 create or replace trigger contratrelai_bir
-before insert on contratrelai 
-for each row 
+before insert on contratrelai
+for each row
 
-begin 
+begin
     select cont_seq.NEXTVAL
     into :new.id
     from dual;
@@ -156,10 +156,25 @@ CREATE TABLE coordgps (
     id       INTEGER NOT NULL,
     coordx   NUMBER,
     coordy   NUMBER,
-    coordz   NUMBER
+    transcolis_id integer not null
+    
 );
 
 ALTER TABLE coordgps ADD CONSTRAINT coordgps_pk PRIMARY KEY ( id );
+
+drop sequence coord_seq;
+create sequence coord_seq start with 1;
+
+create or replace trigger coordgps_bir
+before insert on coordgps
+for each row
+
+begin
+    select coord_seq.NEXTVAL
+    into :new.id
+    from dual;
+end;
+/
 
 CREATE TABLE couvrir (
     livreur_id       INTEGER NOT NULL,
@@ -195,16 +210,30 @@ ALTER TABLE facture ADD CONSTRAINT facture_pk PRIMARY KEY ( id );
 
 CREATE TABLE horaires (
     id                              INTEGER NOT NULL,
-    heuredebut                      DATE,
-    heurefin                        DATE,
+    heuredebut                      INTEGER NOT NULL,
+    heurefin                        INTEGER NOT NULL,
     datedebut                       DATE,
     datefin                         DATE,
     magasin_id                      INTEGER NOT NULL,
-    encours                         CHAR(1),
-    
+    encours                         CHAR(1)
+   
 );
 
 ALTER TABLE horaires ADD CONSTRAINT horaires_pk PRIMARY KEY ( id );
+
+drop sequence hor_seq;
+create sequence hor_seq start with 1;
+
+create or replace trigger horaires_bir
+before insert on horaires
+for each row
+
+begin
+    select hor_seq.NEXTVAL
+    into :new.id
+    from dual;
+end;
+/
 
 CREATE TABLE listeadressescolis (
     id           INTEGER NOT NULL,
@@ -229,10 +258,10 @@ drop sequence liv_seq;
 create sequence liv_seq start with 1;
 
 create or replace trigger livreue_bir
-before insert on livreur 
-for each row 
+before insert on livreur
+for each row
 
-begin 
+begin
     select liv_seq.NEXTVAL
     into :new.id
     from dual;
@@ -252,14 +281,13 @@ CREATE TABLE magasin (
     listeadressescolis_id   INTEGER NOT NULL
 );
 
-ALTER TABLE magasin ADD CONSTRAINT magasin_pk PRIMARY KEY ( id,
-                                                            listeadressescolis_id );
+ALTER TABLE magasin ADD CONSTRAINT magasin_pk PRIMARY KEY ( id );
 
 CREATE TABLE "S'occuper" (
     livreur_id                               INTEGER NOT NULL,
     transcolis_id                            INTEGER NOT NULL,
-    transcolis_colis_id                      INTEGER, 
---  ERROR: Column name length exceeds maximum allowed length(30) 
+    transcolis_colis_id                      INTEGER,
+--  ERROR: Column name length exceeds maximum allowed length(30)
     transcolis_colis_listeadressescolis_id   INTEGER
 );
 
@@ -271,9 +299,9 @@ ALTER TABLE "S'occuper"
 
 CREATE TABLE siteecommerce (
     id               INTEGER NOT NULL,
-    raison_sociale   CHAR 
---  WARNING: CHAR size not specified 
-    ,
+    raison_sociale   CHAR(50),
+--  WARNING: CHAR size not specified
+    
     numeroregistre   INTEGER,
     telephone        NUMBER,
     numrue           INTEGER,
@@ -291,10 +319,24 @@ CREATE TABLE tarif (
     prix                            FLOAT,
     magasin_id                      INTEGER NOT NULL,
     encours                         CHAR(1)
-    
+   
 );
 
 ALTER TABLE tarif ADD CONSTRAINT tarif_pk PRIMARY KEY ( id );
+
+drop sequence tar_seq;
+create sequence tar_seq start with 1;
+
+create or replace trigger tarif_bir
+before insert on tarif
+for each row
+
+begin
+    select tar_seq.NEXTVAL
+    into :new.id
+    from dual;
+end;
+/
 
 CREATE TABLE transcolis (
     id                            INTEGER NOT NULL,
@@ -309,9 +351,7 @@ CREATE TABLE transcolis (
 );
 
 ALTER TABLE transcolis
-    ADD CONSTRAINT transcolis_pk PRIMARY KEY ( id,
-                                               colis_id,
-                                               colis_listeadressescolis_id );
+    ADD CONSTRAINT transcolis_pk PRIMARY KEY ( id );
 
 CREATE TABLE transite (
     magasin_id                               INTEGER NOT NULL,
@@ -319,8 +359,8 @@ CREATE TABLE transite (
     magasin_id1                              INTEGER,
     magasin_listeadressescolis_id            INTEGER,
     magasin_listeadressescolis_id1           INTEGER,
-    transcolis_colis_id                      INTEGER, 
---  ERROR: Column name length exceeds maximum allowed length(30) 
+    transcolis_colis_id                      INTEGER,
+--  ERROR: Column name length exceeds maximum allowed length(30)
     transcolis_colis_listeadressescolis_id   INTEGER,
     magasin_listeadressescolis_id2           INTEGER
 );
@@ -363,6 +403,10 @@ ALTER TABLE contratsite
         REFERENCES siteecommerce ( id );
 
 -- Error - Foreign Key coordGps_TransColis_FK has no columns
+
+ALTER TABLE coordgps
+    ADD CONSTRAINT coordGps_TransColis_FK FOREIGN KEY ( transcolis_id )
+        REFERENCES transcolis ( id );
 
 ALTER TABLE facture
     ADD CONSTRAINT facture_siteecommerce_fk FOREIGN KEY ( siteecommerce_id )
@@ -448,7 +492,7 @@ insert into client values(7,'Pierre');
 insert into client values(8,'Emilien');
 insert into client values(9,'Quentin');
 insert into client values(10,'Paul');
-insert into client values(0,'Georges'); --le trigger marche bien 
+insert into client values(0,'Georges'); --le trigger marche bien
 
 select * from client;
 
@@ -480,29 +524,29 @@ insert into listeadressescolis values(10,10,TO_DATE('19990218','YYYYMMDD'));
 
 --select * from listeadressescolis;
 
-insert into magasin values(1,1,'rue du tourment','Villejuif',94,'GTHIC',1111,'PERROT',613254789,1);
-insert into magasin values(2,2,'rue du tournelsol','Villeverte',90,'STREETWEAR3',1112,'PARS',684421563,1);
-insert into magasin values(3,2,'rue du paradis','Villenoire',99,'BOXING BEARS',1113,'BRIGITTE',623254895,1);
-insert into magasin values(4,4,'rue du chatiment','Villemauve',46,'HADNMADE SHOES',1114,'SARDOU',635417875,2);
-insert into magasin values(5,4,'rue du cercle','Villechretienne',60,'SOUTHERN CLOTHING',1115,'PERI',635986535,2);
-insert into magasin values(6,19,'rue du grand jeu','Villeislamique',87,'GAMING GEARS',1116,'ZOLA',632659887,3);
-insert into magasin values(7,17,'rue du grand jeu','Villeislamique',87,'COMPUTER BEASTS',1117,'MONTAIGNE',654218754,4);
-insert into magasin values(8,15,'rue du phare','Villeperdue',74,'SOFT CANDIES',1118,'MONTEQUIEU',639429331,4);
-insert into magasin values(9,18,'rue du tacos','Ville-sur-yvettes',30,'WE SELL DRUGS',1119,'BAUDELAIRE',0624863274,4);
-insert into magasin values(10,1,'rue du kebab','Ville-coeur-brises',41,'TOYS AT HOME',1110,'VOLTAIRE',668426842,4);
+insert into magasin values(1,1,'rue du tourment','Villejuif',90,'GTHIC',1111,'PERROT',613254789,1);
+insert into magasin values(2,2,'rue du tournelsol','Villeverte',91,'STREETWEAR3',1112,'PARS',684421563,1);
+insert into magasin values(3,2,'rue du paradis','Villenoire',92,'BOXING BEARS',1113,'BRIGITTE',623254895,1);
+insert into magasin values(4,4,'rue du chatiment','Villemauve',93,'HADNMADE SHOES',1114,'SARDOU',635417875,2);
+insert into magasin values(5,4,'rue du cercle','Villechretienne',94,'SOUTHERN CLOTHING',1115,'PERI',635986535,2);
+insert into magasin values(6,19,'rue du grand jeu','Villeislamique',95,'GAMING GEARS',1116,'ZOLA',632659887,3);
+insert into magasin values(7,17,'rue du grand jeu','Villeislamique',96,'COMPUTER BEASTS',1117,'MONTAIGNE',654218754,4);
+insert into magasin values(8,15,'rue du phare','Villeperdue',97,'SOFT CANDIES',1118,'MONTEQUIEU',639429331,4);
+insert into magasin values(9,18,'rue du tacos','Ville-sur-yvettes',98,'WE SELL DRUGS',1119,'BAUDELAIRE',0624863274,4);
+insert into magasin values(10,1,'rue du kebab','Ville-coeur-brises',99,'TOYS AT HOME',1110,'VOLTAIRE',668426842,4);
 
 select * from magasin;
 
-insert into adresse values (1,'rue des alliés',1,'Pavois',74,1,1);
-insert into adresse values (1,'rue des animaux',45,'Rocheville',41,2,1);
-insert into adresse values (1,'rue des ferrys',78,'Marvois',36,3,1);
-insert into adresse values (1,'rue des avions',42,'Pontax',57,4,1);
-insert into adresse values (1,'rue des bateaux',96,'Ozoirax',63,5,2);
-insert into adresse values (1,'rue des voitures',24,'Pariax',22,6,2);
-insert into adresse values (1,'rue des cornes',100,'Orlyax',20,7,4);
-insert into adresse values (1,'rue des jardins',33,'Vitryax',37,8,4);
-insert into adresse values (1,'rue des malabars',78,'Antonax',64,9,3);
-insert into adresse values (1,'rue des coquillages',79,'Fresnax',11,10,3);
+insert into adresse values (1,'rue des alliés',4,'Pavois',90,1,1);
+insert into adresse values (1,'rue des animaux',35,'Rocheville',91,2,1);
+insert into adresse values (1,'rue des ferrys',47,'Marvois',92,3,1);
+insert into adresse values (1,'rue des avions',74,'Pontax',93,4,1);
+insert into adresse values (1,'rue des bateaux',36,'Ozoirax',94,5,2);
+insert into adresse values (1,'rue des voitures',84,'Pariax',95,6,2);
+insert into adresse values (1,'rue des cornes',22,'Orlyax',96,7,4);
+insert into adresse values (1,'rue des jardins',33,'Vitryax',97,8,4);
+insert into adresse values (1,'rue des malabars',77,'Antonax',98,9,3);
+insert into adresse values (1,'rue des coquillages',79,'Fresnax',99,10,3);
 
 select * from adresse;
 
@@ -519,8 +563,46 @@ insert into contratrelai values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('202105
 
 select * from contratrelai;
 
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210601','YYYYMMDD'),250,1,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210501','YYYYMMDD'),251,2,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210401','YYYYMMDD'),252,3,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210301','YYYYMMDD'),253,4,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210201','YYYYMMDD'),254,5,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210701','YYYYMMDD'),255,6,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210901','YYYYMMDD'),256,7,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20211001','YYYYMMDD'),257,8,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20211101','YYYYMMDD'),258,9,1);
+insert into tarif values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20211101','YYYYMMDD'),259,10,1);
 
--- Oracle SQL Developer Data Modeler Summary Report: 
+select * from tarif;
+
+insert into horaires values(1,9,21,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210601','YYYYMMDD'),1,0);
+insert into horaires values(1,8,22,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210601','YYYYMMDD'),2,0);
+insert into horaires values(1,9,22,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210601','YYYYMMDD'),3,0);
+insert into horaires values(1,10,20,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20210601','YYYYMMDD'),4,0);
+insert into horaires values(1,9,19,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20220601','YYYYMMDD'),5,1);
+insert into horaires values(1,8,18,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20220601','YYYYMMDD'),6,1);
+insert into horaires values(1,7,18,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20220601','YYYYMMDD'),7,1);
+insert into horaires values(1,9,19,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20220601','YYYYMMDD'),8,1);
+insert into horaires values(1,10,20,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20220601','YYYYMMDD'),9,1);
+insert into horaires values(1,10,20,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20220601','YYYYMMDD'),10,1);
+
+
+select * from horaires;
+
+
+
+
+
+--insert into coordgps values(1,45,5,1);
+
+--select * from coordgps;
+
+
+
+
+
+-- Oracle SQL Developer Data Modeler Summary Report:
 -- 
 -- CREATE TABLE                            20
 -- CREATE INDEX                             2
@@ -540,7 +622,7 @@ select * from contratrelai;
 -- CREATE CONTEXT                           0
 -- CREATE DATABASE                          0
 -- CREATE DIMENSION                         0
--- CREATE DIRECTORY                         0   
+-- CREATE DIRECTORY                         0  
 -- CREATE DISK GROUP                        0
 -- CREATE ROLE                              0
 -- CREATE ROLLBACK SEGMENT                  0
