@@ -58,6 +58,7 @@ CREATE TABLE adresse (
 drop sequence adr_seq;
 create sequence adr_seq start with 1;
 
+
 create or replace trigger adresse_bir
 before insert on adresse
 for each row
@@ -162,6 +163,10 @@ CREATE TABLE contratsite (
     encours            CHAR(1)
 );
 
+
+
+ALTER TABLE contratsite ADD CONSTRAINT contratsite_pk PRIMARY KEY ( id );
+
 drop sequence csi_seq;
 create sequence csi_seq start with 1;
 
@@ -175,8 +180,6 @@ begin
     from dual;
 end;
 /
-
-ALTER TABLE contratsite ADD CONSTRAINT contratsite_pk PRIMARY KEY ( id );
 
 CREATE TABLE coordgps (
     id       INTEGER NOT NULL,
@@ -207,19 +210,6 @@ CREATE TABLE couvrir (
     departement_id   INTEGER NOT NULL
 );
 
-drop sequence cou_seq;
-create sequence cou_seq start with 1;
-
-create or replace trigger couvrir_bir
-before insert on couvrir
-for each row
-
-begin
-    select cou_seq.NEXTVAL
-    into :new.id
-    from dual;
-end;
-/
 
 ALTER TABLE couvrir ADD CONSTRAINT relation_24_pk PRIMARY KEY ( livreur_id,
                                                                 departement_id );
@@ -250,19 +240,7 @@ CREATE TABLE "depend de" (
     facture_id         INTEGER NOT NULL
 );
 
-drop sequence ded_seq;
-create sequence ded_seq start with 1;
 
-create or replace trigger dependde_bir
-before insert on "depend de"
-for each row
-
-begin
-    select ded_seq.NEXTVAL
-    into :new.id
-    from dual;
-end;
-/
 
 ALTER TABLE "depend de" ADD CONSTRAINT relation_28_pk_ PRIMARY KEY ( typelivraison_id,
                                                                     facture_id );
@@ -337,7 +315,7 @@ begin
 end;
 /
 
-CREATE UNIQUE INDEX listeadressescolis__idx ON
+CREATE UNIQUE INDEX listeadressescolis__idx ON  --index 
     listeadressescolis (
         livreur_id
     ASC );
@@ -397,19 +375,6 @@ CREATE TABLE "S'occuper" (
     livreur_id                               INTEGER NOT NULL,
     transcolis_id                            INTEGER NOT NULL );
 
-drop sequence soc_seq;
-create sequence soc_seq start with 1;
-
-create or replace trigger soccuper_bir
-before insert on "S'occuper"
-for each row
-
-begin
-    select soc_seq.NEXTVAL
-    into :new.id
-    from dual;
-end;
-/
 
 ALTER TABLE "S'occuper"
     ADD CONSTRAINT relation_23_pk PRIMARY KEY ( livreur_id,
@@ -497,27 +462,11 @@ ALTER TABLE transcolis
 
 CREATE TABLE transite (
     magasin_id                               INTEGER NOT NULL,
-    transcolis_id                            INTEGER NOT NULL,
-    magasin_id1                              INTEGER );
+    transcolis_id                            INTEGER NOT NULL);
 
-drop sequence trn_seq;
-create sequence trn_seq start with 1;
-
-create or replace trigger transite_bir
-before insert on transite
-for each row
-
-begin
-    select trn_seq.NEXTVAL
-    into :new.id
-    from dual;
-end;
-/
 
 ALTER TABLE transite
-    ADD CONSTRAINT relation_18_pk__ PRIMARY KEY ( magasin_id,
-                                                transcolis_id,
-                                                magasin_id1 );
+    ADD CONSTRAINT relation_18_pk__ PRIMARY KEY ( magasin_id );
 
 CREATE TABLE typelivraison (
     id     INTEGER NOT NULL,
@@ -570,13 +519,11 @@ ALTER TABLE magasin
 
 ALTER TABLE transite
     ADD CONSTRAINT relation_18_magasin_fk FOREIGN KEY ( magasin_id )
-        REFERENCES magasin ( id,
-                             listeadressescolis_id );
+        REFERENCES magasin ( id );
 
 ALTER TABLE transite
     ADD CONSTRAINT relation_18_transcolis_fk FOREIGN KEY ( transcolis_id )
-        REFERENCES transcolis ( id,
-                                colis_id );
+        REFERENCES transcolis ( id );
 
 ALTER TABLE "S'occuper"
     ADD CONSTRAINT relation_23_livreur_fk FOREIGN KEY ( livreur_id )
@@ -584,8 +531,7 @@ ALTER TABLE "S'occuper"
 
 ALTER TABLE "S'occuper"
     ADD CONSTRAINT relation_23_transcolis_fk FOREIGN KEY ( transcolis_id )
-        REFERENCES transcolis ( id,
-                                colis_id );
+        REFERENCES transcolis ( id);
 
 ALTER TABLE couvrir
     ADD CONSTRAINT relation_24_departement_fk FOREIGN KEY ( departement_id )
@@ -731,18 +677,6 @@ insert into typelivraison values(4,'Adresse-Adresse');
 
 select * from typelivraison;
 
-insert into facture values(1,0,1,0);
-insert into facture values(1,0,2,1);
-insert into facture values(1,0,3,1);
-insert into facture values(1,0,4,0);
-insert into facture values(1,0,5,0);
-insert into facture values(1,0,5,1);
-insert into facture values(1,0,7,0);
-insert into facture values(1,0,8,1);
-insert into facture values(1,0,9,1);
-insert into facture values(1,0,10,1);
-
-select * from facture;
 
 insert into siteecommerce values(1,'Amazon',2220,0122334455,10,'Rue du Business','Parix',90);
 insert into siteecommerce values(1,'LDLC',2221,0203040506,20,'Boulevard des Profits','Marseillix',91);
@@ -756,6 +690,20 @@ insert into siteecommerce values(1,'Alibaba',2228,0101010101,90,'Avenue de la Ve
 insert into siteecommerce values(1,'Vinted',2229,0908070605,100,'Rue du Découvert','Nicix',99);
 
 select * from siteecommerce;
+
+insert into facture values(1,0,1,0);
+insert into facture values(1,0,2,1);
+insert into facture values(1,0,3,1);
+insert into facture values(1,0,4,0);
+insert into facture values(1,0,5,0);
+insert into facture values(1,0,5,1);
+insert into facture values(1,0,7,0);
+insert into facture values(1,0,8,1);
+insert into facture values(1,0,9,1);
+insert into facture values(1,0,10,1);
+
+select * from facture;
+
 
 insert into colis values(1,'Ordinateur',60.0,2.0,1500,1,90,0);
 insert into colis values(1,'Clavier',30.0,0.5,120,2,91,0);
@@ -783,19 +731,6 @@ insert into contratsite values(1,TO_DATE('20210302','YYYYMMDD'),TO_DATE('2021040
 
 select * from contratsite;
 
-insert into couvrir values(1,1);
-insert into couvrir values(2,2);
-insert into couvrir values(3,3);
-insert into couvrir values(4,4);
-insert into couvrir values(5,5);
-insert into couvrir values(6,6);
-insert into couvrir values(7,7);
-insert into couvrir values(8,8);
-insert into couvrir values(9,9);
-insert into couvrir values(10,10);
-
-select * from couvrir;
-
 insert into departement values(1,90);
 insert into departement values(1,91);
 insert into departement values(1,92);
@@ -809,31 +744,33 @@ insert into departement values(1,99);
 
 select * from departement;
 
+insert into couvrir values(1,1);
+insert into couvrir values(2,2);
+insert into couvrir values(3,3);
+insert into couvrir values(4,4);
+insert into couvrir values(5,5);
+insert into couvrir values(6,6);
+insert into couvrir values(7,7);
+insert into couvrir values(8,8);
+insert into couvrir values(9,9);
+insert into couvrir values(10,10);
+
+select * from couvrir;
+
+
+
 insert into "depend de" values(1,1);
 insert into "depend de" values(2,2);
 insert into "depend de" values(3,3);
 insert into "depend de" values(4,4);
-insert into "depend de" values(5,5);
-insert into "depend de" values(6,6);
-insert into "depend de" values(7,7);
-insert into "depend de" values(8,8);
-insert into "depend de" values(9,9);
-insert into "depend de" values(10,10);
+insert into "depend de" values(1,5);
+insert into "depend de" values(2,6);
+insert into "depend de" values(3,7);
+insert into "depend de" values(4,8);
+insert into "depend de" values(1,9);
+insert into "depend de" values(2,10);
 
 select * from "depend de";
-
-insert into "S'occuper" values(1,1);
-insert into "S'occuper" values(2,2);
-insert into "S'occuper" values(3,3);
-insert into "S'occuper" values(4,4);
-insert into "S'occuper" values(5,5);
-insert into "S'occuper" values(6,6);
-insert into "S'occuper" values(7,7);
-insert into "S'occuper" values(8,8);
-insert into "S'occuper" values(9,9);
-insert into "S'occuper" values(10,10);
-
-select * from "S'occuper";
 
 insert into transcolis values(1,1,1,1,TO_DATE('20210101','YYYYMMDD'),1,1,1);
 insert into transcolis values(1,2,2,1,TO_DATE('20210202','YYYYMMDD'),0,0,2);
@@ -848,16 +785,31 @@ insert into transcolis values(1,10,10,1,TO_DATE('20211010','YYYYMMDD'),0,1,10);
 
 select * from transcolis;
 
-insert into transite values(1,1,1);
-insert into transite values(2,2,2);
-insert into transite values(3,3,3);
-insert into transite values(4,4,4);
-insert into transite values(5,5,5);
-insert into transite values(6,6,6);
-insert into transite values(7,7,7);
-insert into transite values(8,8,8);
-insert into transite values(9,9,9);
-insert into transite values(10,10,10);
+insert into "S'occuper" values(1,1);
+insert into "S'occuper" values(2,2);
+insert into "S'occuper" values(3,3);
+insert into "S'occuper" values(4,4);
+insert into "S'occuper" values(5,5);
+insert into "S'occuper" values(6,6);
+insert into "S'occuper" values(7,7);
+insert into "S'occuper" values(8,8);
+insert into "S'occuper" values(9,9);
+insert into "S'occuper" values(10,10);
+
+select * from "S'occuper";
+
+
+
+insert into transite values(1,1);
+insert into transite values(2,2);
+insert into transite values(3,3);
+insert into transite values(4,4);
+insert into transite values(5,5);
+insert into transite values(6,6);
+insert into transite values(7,7);
+insert into transite values(8,8);
+insert into transite values(9,9);
+insert into transite values(10,10);
 
 select * from transite;
 
