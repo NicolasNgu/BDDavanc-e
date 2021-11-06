@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6C7C690-6E3D-6156-8A20-09AE83008007" name="adresse">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>B8652ADC-99A7-F91B-E0AF-21211B266C7F</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="50BC6B6C-EB51-C275-0642-DF0CE038C2A7">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>72C5285D-CF76-E072-EA6F-7BAD6E227024</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nomRue" id="27179793-474B-EFC2-8EE8-4A88CB11CD18">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>9F293F41-AB84-FFAD-A827-F9DB5FAA1BC1</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numRue" id="5A66220D-48C9-92F9-55AB-CD215CB8483C">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>884030C0-AE24-6709-D153-D97265BB9BB1</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ville" id="599CB538-026D-3361-DE2E-32F674DB89EC">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>4EA202CD-9B27-5D42-6778-770908409491</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="departement" id="7E5C3F53-D381-7BA7-87AF-0C4A4353387F">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>F9EF9359-4942-A046-EBE2-815C32B69448</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Client_id" id="877EB2D2-EDC8-CEC6-15D7-94EDFA57706F">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>71DB0902-6452-CD1E-DBBF-FA7EC2AADBBF</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7EAFA40-CB61-5FC5-DDEC-14D146576CE5" referredColumn="52BDC321-1A0D-CC6F-0D59-03EC382F26A2"/>
+</associations>
+</Column>
+<Column name="listeAdressesColis_id" id="5696CCA1-CEB9-EBD2-548B-C2151F4E11DD">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:27:38 UTC</createdTime>
+<generatorID>6F5C3886-4EE0-039A-91A0-9633B9034EC0</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3C944AC8-C769-8040-C8A4-C959AD092DDC" referredColumn="8A0C8B94-0054-70F1-A7B4-0DB06D23B7D4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4439290-2429-05CB-FE27-423DC89F2911" name="adresse_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>F10486BE-6EC6-C343-3D32-18ED1720E0BE</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50BC6B6C-EB51-C275-0642-DF0CE038C2A7"/>
+<colUsage columnID="5696CCA1-CEB9-EBD2-548B-C2151F4E11DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD4AFB1C-0A53-F099-B342-5027A2F8D744" name="adresse__IDX">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 17:34:59 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>6A42488A-D634-BF05-AA07-EF81F2BFFD38</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="877EB2D2-EDC8-CEC6-15D7-94EDFA57706F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2637B32F-DB88-9241-DA32-61F54963E1F2" name="adresse_Client_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>6A42488A-D634-BF05-AA07-EF81F2BFFD38</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="877EB2D2-EDC8-CEC6-15D7-94EDFA57706F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58B16629-DA67-4764-2A96-21D8A1D7D2B0" name="adresse_listeAdressesColis_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:25:30 UTC</createdTime>
+<generatorID>E46C9576-D1A9-E497-8B39-13C2EAAA603B</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5696CCA1-CEB9-EBD2-548B-C2151F4E11DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

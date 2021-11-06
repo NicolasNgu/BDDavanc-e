@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4993B36A-6789-0326-209D-EB3C4FF33B2D" name="ContratRelai">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>89C67DF7-B93B-8BB1-4BF4-90E4E06CAC43</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="0B1D8836-EF77-C72B-85DD-5283A46DDEAF">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>B1A0D3D2-3B85-861C-EB04-B0743F269F68</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_debut" id="4418FC22-C361-0125-AF87-1FBDFDB0C241">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>8F95701B-04E4-10AC-937B-680614F1ACE0</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_fin" id="0213F43D-1D2A-4008-EC15-3B865EFD0B67">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>BEAD431B-44E6-3366-CEC5-D37FD6F171F0</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tarif" id="A0027196-641C-43DD-E491-E1F37AA4D23D">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>124934FB-C024-9EC3-2B95-CDA11B990359</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dateResiliation" id="8404721A-F354-E28F-DACB-2764EB8EBA8A">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>2609EB8E-8BC5-302B-CD81-6194730CD0E7</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Magasin_id" id="5BB0F338-C193-51FE-B6A3-60B8C15D7519">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>856BDD98-E51D-7C65-B091-EEC864D0685C</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="64F4B5FD-32D7-BF1B-A1AC-8356E317128B" referredColumn="81740D92-E622-DAFB-5868-D516575EB0B1"/>
+</associations>
+</Column>
+<Column name="enCours" id="C61FFF23-9533-3502-F536-A699C0F6D9F7">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:01:53 UTC</createdTime>
+<generatorID>37D84A19-D55A-D612-B90B-6C86DAA784E1</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coefRelai" id="A1615D62-2CBA-675D-0D70-04AE7EA70167">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:04:37 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Magasin_listeAdressesColis_id" id="A7A7F7FB-3DB2-E243-8AC8-D89A595F291D">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:32:37 UTC</createdTime>
+<generatorID>8AD323CE-529A-E78D-F900-C6A62ED7F9B9</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="64F4B5FD-32D7-BF1B-A1AC-8356E317128B" referredColumn="772FE2EF-2015-F44A-2B24-5F40D741F329"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FC4347A2-26C0-29DD-B993-5F61A5FD8697" name="ContratRelai_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>AF173CEB-0853-2BB4-21B7-AF2EEBD1D64D</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B1D8836-EF77-C72B-85DD-5283A46DDEAF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96D4D0F8-AEEF-5DCA-7683-360E973456B5" name="ContratRelai_Magasin_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>ECFC71BB-D5D5-4729-5FC8-4A04A36ACAC8</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5BB0F338-C193-51FE-B6A3-60B8C15D7519"/>
+<colUsage columnID="A7A7F7FB-3DB2-E243-8AC8-D89A595F291D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

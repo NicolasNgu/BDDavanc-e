@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="signerv1" directorySegmentName="seg_0" id="ECFC71BB-D5D5-4729-5FC8-4A04A36ACAC8">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 16:50:29 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<sourcePk>34FE3DA3-BB90-36E6-3AD8-71AAC7664F83</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3966F451-7781-0DB8-1117-CFEC04761810</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>89C67DF7-B93B-8BB1-4BF4-90E4E06CAC43</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

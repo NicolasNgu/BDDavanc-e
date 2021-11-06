@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F1303D43-935D-E67C-1F29-1D77E3381A99" containerWithKeyObject="5801BEB0-0425-CC41-68DD-D8A11525514B" localFKIndex="EC3FEBAE-B227-17A7-2E4D-2BE400A4F24F" name="Facture_SiteEcommerce_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>D866E2B8-1E58-EB95-2CD6-D27067246D3C</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<referredTableLongName>SiteEcommerce</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>49ACE21A-B4CB-CF2C-C107-06071AFDFD92</referredTableID>
+<keyObject>A801C804-1DC4-DDBE-44DD-79B62425ACAB</keyObject>
+<referredKeyID>A801C804-1DC4-DDBE-44DD-79B62425ACAB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

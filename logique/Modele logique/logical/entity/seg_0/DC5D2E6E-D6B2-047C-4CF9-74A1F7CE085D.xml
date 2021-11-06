@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DC5D2E6E-D6B2-047C-4CF9-74A1F7CE085D" name="Facture">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:38:40 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="7FE6D583-0F00-0D2F-7B99-99318F6611A4">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:38:49 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total" id="A64D0B4A-455D-9505-2EAD-B9C5A97B8D47">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:39:05 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="72061CED-4229-F030-A771-B31EA98FDE32">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 16:55:34 UTC</createdTime>
+<generatorID>D866E2B8-1E58-EB95-2CD6-D27067246D3C</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<referedAttribute>4D21CC61-E5B2-6F0C-AE3F-5981B2C97E90</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estPayee" id="532B2B17-9391-DA56-6236-6F9463AA54A4">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 21:16:04 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="73FBD3E0-3D05-BE81-5FE1-39E486F8992D" name="Facture PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:39:24 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="false"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F83B89C3-6DAB-C410-4732-FAA61649D480" name="CoordGps">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>6EB2CFAF-3C9A-29F2-AA34-70842646B540</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="4BBB7FA3-73FB-1F66-FAB2-DB18C4698225">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>E3ABA9A1-CB8B-6A47-3F74-01A6533366E9</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coordX" id="38CEEB76-9735-8DB2-D98A-60115A248974">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>2DD31196-773B-4A54-0594-F9A240381CC8</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coordY" id="7D5FD226-B8C3-A73B-AA66-F056B09C19C1">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>C478F998-3226-BF0D-F243-121AD55245F8</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coordZ" id="DE4D2237-6DF9-FFC8-EC2C-7E444F0B57D4">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>0D29E280-4633-5541-C381-C225D11D793C</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id1" id="60594DFD-58EF-5CA5-9CDC-AF28C61F4236">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:34 UTC</createdTime>
+<generatorID>EF559FC3-122E-A6C1-F800-AB746176269A</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="720FB54E-7E60-D34C-CE17-A4A60760FED9" referredColumn="D5B9C6D3-9222-C599-779D-A190D0098723"/>
+</associations>
+</Column>
+<Column name="id3" id="F2D034DF-AFFD-0F32-43B0-34C5104C8DC1">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:34 UTC</createdTime>
+<generatorID>97E78E19-9BB2-B80D-CF1D-E8B7C06E140A</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="720FB54E-7E60-D34C-CE17-A4A60760FED9" referredColumn="C8377765-F423-454F-B411-94026C21885A"/>
+</associations>
+</Column>
+<Column name="id11" id="EDEF5BE9-659C-28F6-3B86-DE5A2F282A2C">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:34 UTC</createdTime>
+<generatorID>6455CB37-03A8-9382-526E-A9561749DA18</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="720FB54E-7E60-D34C-CE17-A4A60760FED9" referredColumn="ACD88838-340B-9C8A-3F36-0E63D84FE160"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9C7CCE5-B446-5D47-6C2B-82B6E6B844C9" name="CoordGpsv1_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>0CC74B69-FCC4-AB98-A478-40C8F4CB098F</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BBB7FA3-73FB-1F66-FAB2-DB18C4698225"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB7F1B68-0C03-90AA-A0CC-5C700B7DE0E6" name="CoordGps__IDX">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:34 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>37FED4DA-DA55-E927-29DD-045F4BEB4378</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="60594DFD-58EF-5CA5-9CDC-AF28C61F4236"/>
+<colUsage columnID="F2D034DF-AFFD-0F32-43B0-34C5104C8DC1"/>
+<colUsage columnID="EDEF5BE9-659C-28F6-3B86-DE5A2F282A2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="791D7637-F7C2-6B48-0B54-B3372338A8A2" name="CoordGpsv1_TransColis_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>37FED4DA-DA55-E927-29DD-045F4BEB4378</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60594DFD-58EF-5CA5-9CDC-AF28C61F4236"/>
+<colUsage columnID="F2D034DF-AFFD-0F32-43B0-34C5104C8DC1"/>
+<colUsage columnID="EDEF5BE9-659C-28F6-3B86-DE5A2F282A2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
