@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0B5604D5-9192-96CA-7D99-75A042FFB4C8" containerWithKeyObject="B96294C6-200A-CE44-4095-6C5491CC7AB3" localFKIndex="6223A15A-5B7C-57B3-B98C-1565A299C4E6" name="Tarif_Magasin_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>230C4852-9EDD-8886-103D-AAF1DA4DE76A</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<referredTableLongName>Magasin</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BB77D298-7800-D288-2D6F-2A9D113ADD19</referredTableID>
+<keyObject>DBB1F6ED-F75E-4BB2-E428-23EF2F276129</keyObject>
+<referredKeyID>DBB1F6ED-F75E-4BB2-E428-23EF2F276129</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

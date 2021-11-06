@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="recupere" directorySegmentName="seg_0" id="E6D6826D-5B07-FB28-DFB0-0E1D80473FE0">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:26:47 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<sourcePk>E2785940-3DA3-3F94-209E-49A95D7BDD62</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BFF649BA-D4D7-3667-302F-C5CF519EE4E6</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>0C6B631D-1A16-4A61-63DB-75A9F931A3CE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

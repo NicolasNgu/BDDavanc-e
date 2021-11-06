@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0C6B631D-1A16-4A61-63DB-75A9F931A3CE" name="listeAdressesColis">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:24:28 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="B01FCBD3-6AB0-77D1-12FA-7426D8A710B9">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:24:39 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="F15B899B-3CEF-256D-170C-44CA7541080C">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:26:47 UTC</createdTime>
+<generatorID>E6D6826D-5B07-FB28-DFB0-0E1D80473FE0</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<referedAttribute>9E442619-3172-F3E3-6107-EF4ABE2A6769</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dateJour" id="F5BB9640-6AE0-95FB-342C-304FA8389266">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 20:54:44 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="98FBB398-59D7-6985-5AF3-102F91D6FCAF" name="listeAdressesColis PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:24:43 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="false"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

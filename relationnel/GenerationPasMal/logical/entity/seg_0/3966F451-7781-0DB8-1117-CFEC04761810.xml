@@ -1,0 +1,179 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3966F451-7781-0DB8-1117-CFEC04761810" name="Magasin">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:08:06 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="C2F1FD93-5789-45FA-0047-30A7F4B1EDA4">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:08:28 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numeroRue" id="A38A8D48-CCF6-49CA-5478-08B6EE933F1F">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:09:00 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nomRue" id="947AC0BE-A829-E70F-CAAC-B0BB83276F33">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:14:06 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ville" id="96585DE2-2E39-4619-4144-8345F2386D8F">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:12:53 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="departement" id="254CF11A-85AC-3730-5BFE-CE7E026F55EC">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:13:24 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="raisonSociale" id="AA5F9B38-CE6F-E987-192D-B8303343D082">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 15:07:40 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numRegistre" id="1694796C-6C04-43B7-9AAC-CFC70D255511">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 15:07:41 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nomResponsable" id="D80D9054-2D25-4FF8-8779-D1BFD179F7EE">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 15:07:43 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telephone" id="DDB07171-4E62-0D04-1E18-15AE6E70ED2C">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 15:07:44 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="1BD64353-17E1-0C03-F5AE-8C5F1E59D1A2">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:25:09 UTC</createdTime>
+<generatorID>884B36D2-8DF7-41EA-F3F0-A0B9168368E3</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<referedAttribute>B01FCBD3-6AB0-77D1-12FA-7426D8A710B9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estActif" id="2D2003E0-4ADF-5A2E-559C-9A535F1AD92A">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 19:06:35 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="34FE3DA3-BB90-36E6-3AD8-71AAC7664F83" name="PointRelais PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:08:37 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="false"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

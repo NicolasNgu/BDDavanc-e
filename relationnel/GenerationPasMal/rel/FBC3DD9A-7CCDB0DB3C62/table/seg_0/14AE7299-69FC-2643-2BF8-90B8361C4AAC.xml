@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="14AE7299-69FC-2643-2BF8-90B8361C4AAC" name="coordGps">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:52:09 UTC</createdTime>
+<generatorID>BC7262C9-F3DC-E303-C104-A12BD57FE87A</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="0A79F44C-9D5C-224C-4EDA-F369DF1B79BA">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:52:09 UTC</createdTime>
+<generatorID>3159F8B3-0311-F39E-DC52-A732E2EFE7FD</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coordX" id="A058D6CF-B6AA-47F7-2EE9-EA81D7FF67BD">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:52:09 UTC</createdTime>
+<generatorID>60977A06-8C2E-02A0-8DED-972DC87ED311</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coordY" id="098F0723-33DA-1840-AE9E-1494A39C0B5F">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:52:09 UTC</createdTime>
+<generatorID>ACECFCE5-01E2-83B9-726E-05195485CF4E</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88D9C034-9536-EB83-A94C-F060C6AA8E79" name="coordGps_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:52:09 UTC</createdTime>
+<generatorID>E5CC6F00-F96B-6CD5-456B-9084E5AAFF9C</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A79F44C-9D5C-224C-4EDA-F369DF1B79BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D3CFC555-1B22-F996-CF92-044D5871320F" name="coordGps_TransColis_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:52:09 UTC</createdTime>
+<generatorID>27708B5E-A90F-F0ED-A6A9-D61F742B4867</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modele logique" id="AB5CF83F-8DF0-ABA6-6B70-9084CFA6ED83" version="3.5">
-<createdBy>oracle</createdBy>
-<createdTime>2021-11-01 12:45:55 UTC</createdTime>
-<ownerDesignName>ProjetBDD</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>AB5CF83F-8DF0-ABA6-6B70-9084CFA6ED83</designId>
-</OSDM_Design>
