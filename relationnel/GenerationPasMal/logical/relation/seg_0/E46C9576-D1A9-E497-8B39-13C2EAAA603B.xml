@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="listev2" directorySegmentName="seg_0" id="E46C9576-D1A9-E497-8B39-13C2EAAA603B">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:25:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<sourcePk>98FBB398-59D7-6985-5AF3-102F91D6FCAF</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0C6B631D-1A16-4A61-63DB-75A9F931A3CE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B8652ADC-99A7-F91B-E0AF-21211B266C7F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B88FD0AE-81C6-34B0-56BF-FBF6713633BD" containerWithKeyObject="5F330B49-CF2E-F3C8-5433-A0B1204159D6" localFKIndex="BEA57810-1A73-692F-EB3E-210462B84C18" name="TransColis_Client_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 17:24:53 UTC</createdTime>
+<generatorID>E35D6BCF-710C-DC4B-A459-ECEDB07A650F</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<referredTableLongName>Client</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6D8AD7A2-8B99-BB7E-1236-4A93CFD85402</referredTableID>
+<keyObject>52DAD4A0-3602-342A-89B3-8C98F442FAE7</keyObject>
+<referredKeyID>52DAD4A0-3602-342A-89B3-8C98F442FAE7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

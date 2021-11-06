@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="454416EE-9641-F433-09AE-E5A48F52DBFE" name="SiteEcommerce">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 12:49:06 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="4D21CC61-E5B2-6F0C-AE3F-5981B2C97E90">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 12:59:53 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="raison sociale" id="CBD826FB-49DD-C279-23C8-5A2DC94C67D8">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:01:01 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numeroRegistre" id="9EC47144-5C9A-AA41-4537-E27A146B71E4">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:32:47 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telephone" id="4C7C9EE9-008F-03D6-FFE8-1B250FF1D879">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:33:31 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numRue" id="8D77843A-4370-ADC3-D29E-D3F4C5521795">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:34:24 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nomRue" id="18627180-2D8D-9BAD-9A9A-A97D65817AFA">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:34:42 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ville" id="A1ABA462-33C6-28D0-6D6F-1D405CD54553">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:35:00 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="departement" id="D1097A9F-8BB2-2A05-7359-B387DE9D60F6">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 14:35:15 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9A00F44B-B5A9-AFC2-EE63-59074DC8BC08" name="SiteEcommerce PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 13:00:01 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="false"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

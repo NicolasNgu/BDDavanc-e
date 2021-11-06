@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DBDFADD4-2699-EC56-85F7-849CC4C252B9" name="ContratSite">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>F614B273-716A-7B6D-A1F8-FDBB8BCC53FF</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="8DA2F1C4-D4B7-F96B-2E13-525B24B09905">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>F3DFF53B-D01B-D558-D691-20F235425E9B</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_debut" id="5D255768-3509-14E5-FFD0-6EE5301A430F">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>C454578A-C42E-23A4-D843-61D87BA4BDC9</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_fin" id="8A884E9B-6FC1-F201-C7B7-5CE766CE13ED">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>D62247C8-C3AD-147D-AF20-1EE36F61791A</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coefTaille" id="5736422E-E0AC-7A7D-9190-9A35C934693E">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>B659B17C-5F4B-8032-7CC8-8CE50A53E629</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coefPoids" id="88CE1242-ED6E-8AED-2D39-929345E6DAEF">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>C73B143E-C068-6AD6-A5F1-418B44F2CAB1</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coefRelai" id="2B13A491-25BB-A0E1-EC31-9B0861B88330">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>F17FD31B-8AF2-B3FC-99D6-7C03D0917D51</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SiteEcommerce_id" id="04E524B3-2919-8115-CB06-C8EF91D6E61F">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>8AB62AF6-8CC8-6997-C90B-F449E63BCF89</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E0CED827-90C9-7985-C4BA-A45A9770A4BF" referredColumn="7902D4D5-E86D-609F-CD25-905BAF7B95EE"/>
+</associations>
+</Column>
+<Column name="enCours" id="3FD29FDB-3845-577E-9D3F-57D988AE5D33">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>46B7DEFC-AB0B-123E-0150-35EC8DDAF982</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6B197E1-0F98-9405-A3D0-138C6DEF5B37" name="ContratSite_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>1CBD17BE-85C4-D6B1-DEE8-F5FC3F68A79A</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DA2F1C4-D4B7-F96B-2E13-525B24B09905"/>
+<colUsage columnID="04E524B3-2919-8115-CB06-C8EF91D6E61F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7B077BD-8A4F-8225-0EE6-7EB45915216A" name="ContratSite_SiteEcommerce_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>41237361-D3AB-99F9-14D3-1B5ACAB02AA9</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04E524B3-2919-8115-CB06-C8EF91D6E61F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

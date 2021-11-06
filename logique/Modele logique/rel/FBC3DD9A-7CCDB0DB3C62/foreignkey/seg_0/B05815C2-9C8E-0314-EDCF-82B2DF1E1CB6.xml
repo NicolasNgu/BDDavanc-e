@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B05815C2-9C8E-0314-EDCF-82B2DF1E1CB6" containerWithKeyObject="817F3AD7-E6AB-2422-7A6C-301D1471DB9D" localFKIndex="7A593F51-A4EB-4532-20F7-126EAECDEF3E" name="Horaires_Magasin_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>8C4C7C60-DC88-AD3F-B208-410EF40D091B</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<referredTableLongName>Magasin</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BB77D298-7800-D288-2D6F-2A9D113ADD19</referredTableID>
+<keyObject>DBB1F6ED-F75E-4BB2-E428-23EF2F276129</keyObject>
+<referredKeyID>DBB1F6ED-F75E-4BB2-E428-23EF2F276129</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id,listeAdressesColis_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C2632E75-1CFA-E9D6-D6CA-49BAEA5790B5" containerWithKeyObject="FF8707DD-5E89-7C1C-6A1B-85DBD5B67DA2" localFKIndex="E3646592-ADE1-3FA4-D95D-5AD707177024" name="Relation_23_livreur_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>1B854436-E86F-AF1F-510A-86D0AAD22284</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<referredTableLongName>livreur</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E588202D-F0BB-0D06-1BAF-4EEFDDDA123C</referredTableID>
+<keyObject>AC00FA47-6284-4242-0F46-7A89C1F58FDC</keyObject>
+<referredKeyID>AC00FA47-6284-4242-0F46-7A89C1F58FDC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

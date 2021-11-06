@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FF8707DD-5E89-7C1C-6A1B-85DBD5B67DA2" name="S&apos;occuper">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="livreur_id" id="65813935-1716-3CDA-0EBB-57123ACCF508">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C2632E75-1CFA-E9D6-D6CA-49BAEA5790B5" referredColumn="E0BB0423-DAEE-E28D-525E-ECB7992A470A"/>
+</associations>
+</Column>
+<Column name="TransColis_id" id="0A2EB216-662B-9C3A-FFE4-84E378393F7A">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59D9B417-428E-2107-8ADF-6C0DAFA3DF27" referredColumn="D5B9C6D3-9222-C599-779D-A190D0098723"/>
+</associations>
+</Column>
+<Column name="TransColis_Colis_id" id="7B79666A-35FE-6F48-7C7F-D4A126E6B2E1">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59D9B417-428E-2107-8ADF-6C0DAFA3DF27" referredColumn="C8377765-F423-454F-B411-94026C21885A"/>
+</associations>
+</Column>
+<Column name="TransColis_Colis_listeAdressesColis_id" id="CDC6A6B9-912C-80BA-5156-B5D808B71DC6">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59D9B417-428E-2107-8ADF-6C0DAFA3DF27" referredColumn="ACD88838-340B-9C8A-3F36-0E63D84FE160"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96FAD21E-0715-2A20-7E69-80A811C07677" name="Relation_23_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65813935-1716-3CDA-0EBB-57123ACCF508"/>
+<colUsage columnID="0A2EB216-662B-9C3A-FFE4-84E378393F7A"/>
+<colUsage columnID="7B79666A-35FE-6F48-7C7F-D4A126E6B2E1"/>
+<colUsage columnID="CDC6A6B9-912C-80BA-5156-B5D808B71DC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3646592-ADE1-3FA4-D95D-5AD707177024" name="Relation_23_livreur_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>1B854436-E86F-AF1F-510A-86D0AAD22284</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65813935-1716-3CDA-0EBB-57123ACCF508"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FD011A22-0989-1D06-316E-B6A363A08476" name="Relation_23_TransColis_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>1B854436-E86F-AF1F-510A-86D0AAD22284</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A2EB216-662B-9C3A-FFE4-84E378393F7A"/>
+<colUsage columnID="7B79666A-35FE-6F48-7C7F-D4A126E6B2E1"/>
+<colUsage columnID="CDC6A6B9-912C-80BA-5156-B5D808B71DC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

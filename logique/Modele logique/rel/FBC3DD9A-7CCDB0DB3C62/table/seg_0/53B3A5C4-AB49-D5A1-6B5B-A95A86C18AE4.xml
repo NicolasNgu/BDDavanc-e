@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53B3A5C4-AB49-D5A1-6B5B-A95A86C18AE4" name="couvrir">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="livreur_id" id="E76CBB1F-B5FB-DB7C-396C-28DC9DF9F856">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6DD2CCEC-0DC2-1319-67E6-08C3E16CE143" referredColumn="E0BB0423-DAEE-E28D-525E-ECB7992A470A"/>
+</associations>
+</Column>
+<Column name="Departement_id" id="77D9471D-D388-CA1D-9AAD-A3D7DDB15D18">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A0B0B2C-7D43-C780-C4DF-00A8A11091E0" referredColumn="966FCDF4-4F22-5E42-68F6-51B4C4D7DA51"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF0F468B-CC92-EDC2-F0BC-507D949FCE09" name="Relation_24_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E76CBB1F-B5FB-DB7C-396C-28DC9DF9F856"/>
+<colUsage columnID="77D9471D-D388-CA1D-9AAD-A3D7DDB15D18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4185BEBE-13DF-F9CA-F5A4-A2CC1AA13A03" name="Relation_24_livreur_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>074E237F-B10B-66B9-1242-3A232C651598</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E76CBB1F-B5FB-DB7C-396C-28DC9DF9F856"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E9B5A22-D277-F13A-08ED-624601BB3D29" name="Relation_24_Departement_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>074E237F-B10B-66B9-1242-3A232C651598</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77D9471D-D388-CA1D-9AAD-A3D7DDB15D18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

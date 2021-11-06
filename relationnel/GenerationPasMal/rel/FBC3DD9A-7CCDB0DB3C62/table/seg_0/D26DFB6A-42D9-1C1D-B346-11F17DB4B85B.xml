@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D26DFB6A-42D9-1C1D-B346-11F17DB4B85B" name="listeAdressesColis">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:27:38 UTC</createdTime>
+<generatorID>0C6B631D-1A16-4A61-63DB-75A9F931A3CE</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="8A0C8B94-0054-70F1-A7B4-0DB06D23B7D4">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:27:38 UTC</createdTime>
+<generatorID>B01FCBD3-6AB0-77D1-12FA-7426D8A710B9</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="livreur_id" id="9BFE06B7-20F3-C20A-A302-722A947091A1">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>F15B899B-3CEF-256D-170C-44CA7541080C</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0FB579B4-558C-337D-193D-22CEAD76EA7E" referredColumn="E0BB0423-DAEE-E28D-525E-ECB7992A470A"/>
+</associations>
+</Column>
+<Column name="dateJour" id="0BB9AE41-25D3-C406-0717-A18FAA91294C">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>F5BB9640-6AE0-95FB-342C-304FA8389266</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C4AD584F-ECFF-AD73-2D8B-5DBC3F0FC088" name="listeAdressesColis_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:24:17 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A0C8B94-0054-70F1-A7B4-0DB06D23B7D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB0E5C77-177E-28E3-46F1-AAA66EDFCD63" name="listeAdressesColis__IDX">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>E6D6826D-5B07-FB28-DFB0-0E1D80473FE0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="9BFE06B7-20F3-C20A-A302-722A947091A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11074CF8-DF1E-6687-F4A9-1A9C1B787BC0" name="listeAdressesColis_livreur_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:27:38 UTC</createdTime>
+<generatorID>E6D6826D-5B07-FB28-DFB0-0E1D80473FE0</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BFE06B7-20F3-C20A-A302-722A947091A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

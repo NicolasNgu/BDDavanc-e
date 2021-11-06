@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B96294C6-200A-CE44-4095-6C5491CC7AB3" name="Tarif">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>A2F5E5CB-73A4-9470-FEAE-30A661A0F6BF</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F33D94D1-CF3A-482C-2303-53FBB71C3666">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>0C8902AE-DDCA-CA4E-4F07-36B5CDD6704A</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dateDebut" id="F4EE92EC-C41E-C5DD-6050-5D91E2715398">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>1DDA3B32-89E4-C493-653E-AD199D342DE1</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dateFin" id="D213A8B0-5FE2-9136-47F9-2274A950BA76">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>5FD700CF-A9D7-4EDC-35B4-7A88EFE3505A</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prix" id="46FFA420-B908-05BB-DFD8-86E1FA6037F9">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>AF91A7F7-61E5-3CA5-2A7B-AF20673672A6</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Magasin_id" id="250A3EA7-70FE-9DA1-B011-C269C961D3C6">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>BD668B3A-7CCE-F525-1907-6C6A5A9BBAB1</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B5604D5-9192-96CA-7D99-75A042FFB4C8" referredColumn="81740D92-E622-DAFB-5868-D516575EB0B1"/>
+</associations>
+</Column>
+<Column name="enCours" id="2FBC80CC-9464-441D-F365-CC18066809DC">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 18:01:53 UTC</createdTime>
+<generatorID>CBC396BE-4FDF-F6BF-C7D4-850987D2C252</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="66A880A3-ABB2-D758-D05F-316D4609AE78" name="Tarif_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>ACA885DF-8608-A419-8AB4-A863A43A533E</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F33D94D1-CF3A-482C-2303-53FBB71C3666"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6223A15A-5B7C-57B3-B98C-1565A299C4E6" name="Tarif_Magasin_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>230C4852-9EDD-8886-103D-AAF1DA4DE76A</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="250A3EA7-70FE-9DA1-B011-C269C961D3C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

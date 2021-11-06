@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C7EAFA40-CB61-5FC5-DDEC-14D146576CE5" containerWithKeyObject="F6C7C690-6E3D-6156-8A20-09AE83008007" localFKIndex="2637B32F-DB88-9241-DA32-61F54963E1F2" name="adresse_Client_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>6A42488A-D634-BF05-AA07-EF81F2BFFD38</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<referredTableLongName>Client</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6D8AD7A2-8B99-BB7E-1236-4A93CFD85402</referredTableID>
+<keyObject>52DAD4A0-3602-342A-89B3-8C98F442FAE7</keyObject>
+<referredKeyID>52DAD4A0-3602-342A-89B3-8C98F442FAE7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

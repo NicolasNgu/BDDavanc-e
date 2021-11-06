@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F330B49-CF2E-F3C8-5433-A0B1204159D6" name="TransColis">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>6C51E09F-1E8A-C5FE-E71E-4493CD59C3B3</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="D5B9C6D3-9222-C599-779D-A190D0098723">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>076C84B2-281C-616F-9617-9110074BA97C</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SiteEcommerce_id" id="9CE1612F-AABC-4B74-35B0-A6BB726BD032">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 17:24:53 UTC</createdTime>
+<generatorID>529580B4-06AB-6BC4-600A-F945796CA82F</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7668BD3E-25D3-D69B-4ABF-953AD7DB7A3E" referredColumn="7902D4D5-E86D-609F-CD25-905BAF7B95EE"/>
+</associations>
+</Column>
+<Column name="Client_id" id="FD754A7E-30FF-EEC0-FCDD-65532FED8F7A">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 17:24:53 UTC</createdTime>
+<generatorID>E68A915F-1B2D-8248-C062-DAC270001111</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B88FD0AE-81C6-34B0-56BF-FBF6713633BD" referredColumn="52BDC321-1A0D-CC6F-0D59-03EC382F26A2"/>
+</associations>
+</Column>
+<Column name="estLivre" id="7313E959-505F-5FA9-D202-A213DD4D2DE1">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>BF998D49-127C-23D1-DF37-EBCF28073E98</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date" id="5C69C3FD-7DB0-55C1-E145-2E7D8A0DE7F0">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>DB7662ED-6C52-46F3-D07E-A780DE4A818B</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estRecupere" id="8B9071A9-DAE6-D991-8090-A39A52567EE1">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>256511F0-7D68-937A-119C-A929194331A8</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="isCurrent" id="D9CF13C8-9F3E-675E-A9BF-8F24A0C3326A">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>2D4FB568-4A08-28F4-B3AF-5B3088C375A8</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Colis_id" id="C8377765-F423-454F-B411-94026C21885A">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>89DB434D-9CBD-6F02-B161-3EB6D58E3739</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="416D0956-D1FF-1ED1-2954-AE8884BCD7C1" referredColumn="BE9F80AE-6CF1-2FE9-F852-40CA32D90079"/>
+</associations>
+</Column>
+<Column name="Colis_listeAdressesColis_id" id="ACD88838-340B-9C8A-3F36-0E63D84FE160">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>77248F68-A1E4-A8DF-DF4C-9EE1D7365581</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="416D0956-D1FF-1ED1-2954-AE8884BCD7C1" referredColumn="5C9D9B14-DCDD-80FB-F209-D6919C48E0DC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="92F791BB-E878-F10E-F818-067B52EFA4E4" name="TransColis_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:15 UTC</createdTime>
+<generatorID>5BA2F6B1-86ED-B85C-A066-A770AE107785</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5B9C6D3-9222-C599-779D-A190D0098723"/>
+<colUsage columnID="C8377765-F423-454F-B411-94026C21885A"/>
+<colUsage columnID="ACD88838-340B-9C8A-3F36-0E63D84FE160"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BEA57810-1A73-692F-EB3E-210462B84C18" name="TransColis_Client_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 17:24:53 UTC</createdTime>
+<generatorID>E35D6BCF-710C-DC4B-A459-ECEDB07A650F</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD754A7E-30FF-EEC0-FCDD-65532FED8F7A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="729DBCDF-B1B6-4301-D04D-F93864087433" name="TransColis_SiteEcommerce_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 17:24:53 UTC</createdTime>
+<generatorID>8F26464D-2BB5-CA32-F3ED-192D277DC756</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CE1612F-AABC-4B74-35B0-A6BB726BD032"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9CFF277-661D-A8F3-9B56-9DC13D7C0E65" name="TransColis_Colis_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<generatorID>C7EE031F-65F5-632C-48DB-312B4A650B9B</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8377765-F423-454F-B411-94026C21885A"/>
+<colUsage columnID="ACD88838-340B-9C8A-3F36-0E63D84FE160"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

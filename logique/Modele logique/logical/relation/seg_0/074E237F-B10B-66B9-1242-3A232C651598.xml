@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="couvrir" directorySegmentName="seg_0" id="074E237F-B10B-66B9-1242-3A232C651598">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 16:54:32 UTC</createdTime>
+<ownerDesignName>Modele logique</ownerDesignName>
+<engineerTo>
+<item key="FBC3DD9A-0061-4D13-AA34-7CCDB0DB3C62" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>BFF649BA-D4D7-3667-302F-C5CF519EE4E6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8136C48F-67FE-D1C0-A2EA-435D30FF3BA2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="720FB54E-7E60-D34C-CE17-A4A60760FED9" containerWithKeyObject="F83B89C3-6DAB-C410-4732-FAA61649D480" localFKIndex="791D7637-F7C2-6B48-0B54-B3372338A8A2" name="CoordGpsv1_TransColis_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:49:02 UTC</createdTime>
+<generatorID>37FED4DA-DA55-E927-29DD-045F4BEB4378</generatorID>
+<ownerDesignName>Modele logique</ownerDesignName>
+<referredTableLongName>TransColis</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5F330B49-CF2E-F3C8-5433-A0B1204159D6</referredTableID>
+<keyObject>92F791BB-E878-F10E-F818-067B52EFA4E4</keyObject>
+<referredKeyID>92F791BB-E878-F10E-F818-067B52EFA4E4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id,Colis_id,Colis_listeAdressesColis_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

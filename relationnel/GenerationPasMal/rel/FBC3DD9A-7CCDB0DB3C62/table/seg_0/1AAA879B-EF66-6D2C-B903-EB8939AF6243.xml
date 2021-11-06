@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1AAA879B-EF66-6D2C-B903-EB8939AF6243" name="transite">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<ordsAlias>relation_18</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Magasin_id" id="B0B5CF63-F95B-81D6-A1DA-EBB499721DE8">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="428572F0-2170-394A-58DA-34B46642DA6B" referredColumn="81740D92-E622-DAFB-5868-D516575EB0B1"/>
+</associations>
+</Column>
+<Column name="TransColis_id" id="BE97216F-CB53-CFAC-FF02-6A232437AAB0">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="72477102-7F31-D96D-674E-6B7E4308B221" referredColumn="D5B9C6D3-9222-C599-779D-A190D0098723"/>
+</associations>
+</Column>
+<Column name="TransColis_Colis_id" id="9D692F3F-7FD4-30ED-C625-D49F0C398DFF">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="72477102-7F31-D96D-674E-6B7E4308B221" referredColumn="C8377765-F423-454F-B411-94026C21885A"/>
+</associations>
+</Column>
+<Column name="TransColis_Colis_listeAdressesColis_id" id="6BD0BFF8-3B3A-A822-5277-023437834503">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-03 22:19:24 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="72477102-7F31-D96D-674E-6B7E4308B221" referredColumn="ACD88838-340B-9C8A-3F36-0E63D84FE160"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="199D56DA-5814-9ECD-484C-B5F07C9E6E8C" name="Relation_18_PK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0B5CF63-F95B-81D6-A1DA-EBB499721DE8"/>
+<colUsage columnID="BE97216F-CB53-CFAC-FF02-6A232437AAB0"/>
+<colUsage columnID="9D692F3F-7FD4-30ED-C625-D49F0C398DFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BCDF5FD5-3101-7CC3-5F22-7B75DCA11192" name="Relation_18_Magasin_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>AF1F6FB0-E92D-B610-3F71-36544B7A98B0</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0B5CF63-F95B-81D6-A1DA-EBB499721DE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30F2E91D-402D-C84D-8C72-0B6193F8B065" name="Relation_18_TransColis_FK">
+<createdBy>oracle</createdBy>
+<createdTime>2021-11-01 17:00:16 UTC</createdTime>
+<generatorID>AF1F6FB0-E92D-B610-3F71-36544B7A98B0</generatorID>
+<ownerDesignName>GenerationPasMal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE97216F-CB53-CFAC-FF02-6A232437AAB0"/>
+<colUsage columnID="9D692F3F-7FD4-30ED-C625-D49F0C398DFF"/>
+<colUsage columnID="6BD0BFF8-3B3A-A822-5277-023437834503"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
