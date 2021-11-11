@@ -1,4 +1,8 @@
 
+------------------------------------
+--DDL-------------------------------
+------------------------------------
+
 
 --CREATION DES TABLES DE LA BDD -----------------------------------------------------------------------------------------------------------------------------
 
@@ -562,7 +566,10 @@ ALTER TABLE transcolis
     ADD CONSTRAINT transcolis_siteecommerce_fk FOREIGN KEY ( siteecommerce_id )
         REFERENCES siteecommerce ( id );
         
-        --LES DONNEES-----------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------
+--Les données-----------------------
+------------------------------------
 
 insert into client values(1,'Nicolas');
 insert into client values(1,'Martin');
@@ -706,14 +713,14 @@ select * from facture;
 
 insert into colis values(1,'Ordinateur',60.0,2.0,1500,1,90,0);
 insert into colis values(1,'Clavier',30.0,0.5,120,2,91,0);
-insert into colis values(1,'Souris',10.0,0.1,30,3,92,0);
-insert into colis values(1,'Enceinte',20.0,0.8,80,4,93,1);
-insert into colis values(1,'Bureau',200.0,30.0,1000,5,94,1);
-insert into colis values(1,'Lit',250.0,50.0,800,6,95,0);
-insert into colis values(1,'Ordinateur',50.0,10.0,1500,7,96,0);
-insert into colis values(1,'Chaise',80.0,1.0,50,8,97,1);
-insert into colis values(1,'Table',150.0,3.0,200,9,98,1);
-insert into colis values(1,'Four',50.0,2.0,400,10,99,1);
+insert into colis values(1,'Souris',10.0,0.1,30,2,92,0);
+insert into colis values(1,'Enceinte',20.0,0.8,80,1,93,1);
+insert into colis values(1,'Bureau',200.0,30.0,1000,1,94,1);
+insert into colis values(1,'Lit',250.0,50.0,800,1,95,0);
+insert into colis values(1,'CleUsb',50.0,10.0,1500,2,96,0);
+insert into colis values(1,'Chaise',80.0,1.0,50,3,97,1);
+insert into colis values(1,'Table',150.0,3.0,200,3,98,1);
+insert into colis values(1,'Four',50.0,2.0,400,4,99,1);
 
 select * from colis;
 
@@ -772,20 +779,21 @@ insert into "depend de" values(2,10);
 select * from "depend de";
 
 insert into transcolis values(1,1,1,1,TO_DATE('20210101','YYYYMMDD'),1,1,1);
-insert into transcolis values(1,2,2,1,TO_DATE('20210202','YYYYMMDD'),0,0,2);
+insert into transcolis values(1,1,1,1,TO_DATE('20210201','YYYYMMDD'),1,1,1);
+insert into transcolis values(1,2,2,0,TO_DATE('20210202','YYYYMMDD'),1,0,2);
 insert into transcolis values(1,3,3,1,TO_DATE('20210303','YYYYMMDD'),1,0,3);
-insert into transcolis values(1,4,4,0,TO_DATE('20210404','YYYYMMDD'),0,1,4);
+insert into transcolis values(1,4,4,0,TO_DATE('20210505','YYYYMMDD'),0,1,4);
 insert into transcolis values(1,5,5,1,TO_DATE('20210505','YYYYMMDD'),1,1,5);
-insert into transcolis values(1,6,6,1,TO_DATE('20210606','YYYYMMDD'),1,0,6);
+insert into transcolis values(1,6,6,0,TO_DATE('20210606','YYYYMMDD'),1,0,6);
 insert into transcolis values(1,7,7,0,TO_DATE('20210707','YYYYMMDD'),0,1,7);
 insert into transcolis values(1,8,8,0,TO_DATE('20210808','YYYYMMDD'),0,0,8);
 insert into transcolis values(1,9,9,1,TO_DATE('20210909','YYYYMMDD'),1,0,9);
-insert into transcolis values(1,10,10,1,TO_DATE('20211010','YYYYMMDD'),0,1,10);
+insert into transcolis values(1,10,10,0,TO_DATE('20211010','YYYYMMDD'),1,1,10);
 
 select * from transcolis;
 
 insert into "S'occuper" values(1,1);
-insert into "S'occuper" values(2,2);
+insert into "S'occuper" values(1,2);
 insert into "S'occuper" values(3,3);
 insert into "S'occuper" values(4,4);
 insert into "S'occuper" values(5,5);
@@ -812,13 +820,12 @@ insert into transite values(10,10);
 
 select * from transite;
 
+------------------------------------
+--Les Vues--------------------------
+------------------------------------
 
 
---LES VUES-----------------------------------------------------------------------------------------------------------------------------
-
---CREATE VIEW listClientActifs AS SELECT distinct raison_sociale from siteecommerce join contratsite on contratsite.encours = 1;
---select * from listClientActifs;
-
+--Question 1
 CREATE or replace VIEW listClientActifs AS
 SELECT distinct raison_sociale
 FROM siteecommerce
@@ -827,6 +834,8 @@ WHERE enCours = 1;
 
 select * from listClientActifs;
 
+
+--Question 2
 CREATE or replace VIEW listRelaisActifs AS
 SELECT distinct raisonSociale
 FROM Magasin
@@ -835,20 +844,104 @@ WHERE enCours = 1;
 
 select * from listRelaisActifs;
 
-/*CREATE VIEW listeLivraisons AS
-SELECT nom
-FROM Colis
-JOIN listeAdressesColis ON Colis.listeAdressesColis_id = listeAdressesColis.id
-WHERE datejour = TO_DATE('19990218','YYYYMMDD');
+--Question 3
+CREATE or replace VIEW listeLivraisons AS
+SELECT distinct T."date", C.nom, A.nomRue, A.numRue, A.ville, S.livreur_id
+FROM transcolis T
+JOIN colis C ON T.Colis_id = C.id
+JOIN "S'occuper" S ON T.id = TransColis_id
+JOIN client CL ON T.Client_id = CL.id
+JOIN adresse A ON CL.id = A.Client_id
+WHERE T."date" = TO_DATE('20210505','YYYYMMDD')
+GROUP BY T."date", C.nom, A.nomrue, A.numRue, A.ville, S.livreur_id
+ORDER BY S.livreur_id;
 
-select * from listeLivraisons;*/
+select * from listeLivraisons;
 
-/*CREATE VIEW listeLivraisons AS
-SELECT nom
-FROM Colis
-JOIN listeAdressesColis ON Colis.listeAdressesColis_id = listeAdressesColis.id
-WHERE datejour = TO_DATE('19990218','YYYYMMDD') AND livreur_id = 1;*/
 
+--Question 4
+CREATE or replace VIEW nbrLivraisons AS
+SELECT livreur_id, "date", COUNT (id) AS "nombreColis"
+FROM transcolis
+JOIN "S'occuper" ON transcolis.id = "S'occuper".transcolis_id
+WHERE estLivre = 1
+GROUP BY livreur_id, "date"
+ORDER BY "date";
+
+select * from nbrLivraisons;
+
+
+--Question 5
+CREATE or replace VIEW nbrColisRelais AS
+SELECT COUNT (C.id) AS "nombreRelai", T."date", M.raisonSociale
+FROM colis C
+JOIN transcolis T ON C.id = T.colis_id
+JOIN transite TR ON T.id = TR.TransColis_id
+JOIN magasin M ON TR.Magasin_id = M.id
+WHERE C.destinationRelai = 1 AND T."date" = TO_DATE('20210505','YYYYMMDD')
+GROUP BY T."date", M.raisonSociale
+ORDER BY T."date";
+
+select * from nbrColisRelais;
+
+
+--Question 6
+CREATE or replace VIEW livraisonsEnCours AS
+SELECT C.nom, S.livreur_id
+FROM Colis C
+JOIN TransColis T ON C.id = T.Colis_id
+JOIN "S'occuper" S ON T.id = S.TransColis_id
+WHERE T.isCurrent = 1
+GROUP BY S.livreur_id, C.nom
+ORDER BY S.livreur_id;
+
+select * from livraisonsEnCours;
+
+
+--Question 7
+CREATE or replace VIEW attenteClient AS
+SELECT COUNT(id) "nbrEnAttente"
+FROM TransColis
+WHERE estRecupere = 0;
+
+select * FROM attenteClient;
+
+
+--Question 8
+/*CREATE VIEW avgColisTransit AS
+SELECT CAST(AVG(CAST("date" AS INT)) AS DATE), nom
+FROM transcolis
+JOIN Client ON transcolis.Client_id = client.id
+GROUP BY nom;*/
+
+
+------------------------------------
+--Contraintes d'intégrité-----------
+------------------------------------
+
+
+------------------------------------
+--Procédures et fonctions-----------
+------------------------------------
+
+--Question 1
+DELIMITER ?
+CREATE OR REPLACE PROCEDURE genFactureClient()
+BEGIN
+SELECT COUNT
+
+--Question 2
+CREATE OR REPLACE PROCEDURE genPaiementRelais()
+BEGIN
+SELECT COUNT 
+
+--Question 3
+CREATE OR REPLACE FUNCTION calTarifColis
+
+
+------------------------------------
+--Les Triggers----------------------
+------------------------------------
 
 
 
