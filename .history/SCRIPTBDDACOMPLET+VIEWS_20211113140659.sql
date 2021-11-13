@@ -476,7 +476,7 @@ ALTER TABLE transite
     ADD CONSTRAINT relation_18_pk__ PRIMARY KEY ( magasin_id );
 
 CREATE TABLE typelivraison (
-    id     INTEGER NOT NULL, 
+    id     INTEGER NOT NULL,
     type   CHAR(50)
 );
 
@@ -729,16 +729,16 @@ insert into colis values(1,'Four',50.0,2.0,400,4,99,1,0);
 
 select * from colis;
 
-insert into contratsite values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20211201','YYYYMMDD'),0,2,2,0.5,1,1);
-insert into contratsite values(1,TO_DATE('20210111','YYYYMMDD'),TO_DATE('20210202','YYYYMMDD'),0,1.5,2,0.5,2,0);
-insert into contratsite values(1,TO_DATE('20210202','YYYYMMDD'),TO_DATE('20210606','YYYYMMDD'),0,2,1.5,0.5,3,0);
-insert into contratsite values(1,TO_DATE('20210303','YYYYMMDD'),TO_DATE('2021125','YYYYMMDD'),0,1.2,1.2,0.5,4,1);
-insert into contratsite values(1,TO_DATE('20210404','YYYYMMDD'),TO_DATE('20210505','YYYYMMDD'),0,3,1,0.5,5,0);
-insert into contratsite values(1,TO_DATE('20201111','YYYYMMDD'),TO_DATE('20210101','YYYYMMDD'),0,1.8,1.8,0.5,6,0);
-insert into contratsite values(1,TO_DATE('20200606','YYYYMMDD'),TO_DATE('20210707','YYYYMMDD'),0,2.5,2.5,0.5,7,0);
-insert into contratsite values(1,TO_DATE('20211010','YYYYMMDD'),TO_DATE('20220101','YYYYMMDD'),0,1.3,1.7,0.5,8,1);
-insert into contratsite values(1,TO_DATE('20210909','YYYYMMDD'),TO_DATE('20220202','YYYYMMDD'),0,1.7,1.3,0.5,9,1);
-insert into contratsite values(1,TO_DATE('20210302','YYYYMMDD'),TO_DATE('20210403','YYYYMMDD'),0,3,3,0.5,10,0);
+insert into contratsite values(1,TO_DATE('20210101','YYYYMMDD'),TO_DATE('20211201','YYYYMMDD'),0,2,2,5,1,1);
+insert into contratsite values(1,TO_DATE('20210111','YYYYMMDD'),TO_DATE('20210202','YYYYMMDD'),0,1.5,2,5,2,1);
+insert into contratsite values(1,TO_DATE('20210202','YYYYMMDD'),TO_DATE('20210606','YYYYMMDD'),0,2,1.5,5,3,1);
+insert into contratsite values(1,TO_DATE('20210303','YYYYMMDD'),TO_DATE('2021125','YYYYMMDD'),0,1.2,1.2,5,4,1);
+insert into contratsite values(1,TO_DATE('20210404','YYYYMMDD'),TO_DATE('20210505','YYYYMMDD'),0,3,1,5,5,1);
+insert into contratsite values(1,TO_DATE('20201111','YYYYMMDD'),TO_DATE('20210101','YYYYMMDD'),0,1.8,1.8,5,6,1);
+insert into contratsite values(1,TO_DATE('20200606','YYYYMMDD'),TO_DATE('20210707','YYYYMMDD'),0,2.5,2.5,5,7,1);
+insert into contratsite values(1,TO_DATE('20211010','YYYYMMDD'),TO_DATE('20220101','YYYYMMDD'),0,1.3,1.7,0,8,1);
+insert into contratsite values(1,TO_DATE('20210909','YYYYMMDD'),TO_DATE('20220202','YYYYMMDD'),0,1.7,1.3,5,9,1);
+insert into contratsite values(1,TO_DATE('20210302','YYYYMMDD'),TO_DATE('20210403','YYYYMMDD'),0,3,3,5,10,1);
 
 select * from contratsite;
 
@@ -784,7 +784,7 @@ insert into "depend de" values(2,10);
 select * from "depend de";
 
 insert into transcolis values(1,1,1,1,TO_DATE('20210101','YYYYMMDD'),1,1,1);
-insert into transcolis values(1,1,1,1,TO_DATE('20210201','YYYYMMDD'),1,1,1);
+insert into transcolis values(1,1,1,1,TO_DATE('20210201','YYYYMMDD'),1,0,1);
 insert into transcolis values(1,2,2,0,TO_DATE('20210202','YYYYMMDD'),1,0,2);
 insert into transcolis values(1,3,3,1,TO_DATE('20210303','YYYYMMDD'),1,0,3);
 insert into transcolis values(1,4,4,0,TO_DATE('20210505','YYYYMMDD'),0,1,4);
@@ -924,6 +924,8 @@ WHERE estRecupere = 0;
 
 select * FROM attenteClient;
 
+select * from colis;
+
 
 --Question 8
 /*CREATE VIEW avgColisTransit AS
@@ -943,6 +945,7 @@ GROUP BY nom;*/
 ------------------------------------
 
 --Question 1
+--DELIMITER ? yes
 CREATE OR REPLACE PROCEDURE genFactureClient(id_site INTEGER) IS
 totalRR integer := 0;
 totalAR INTEGER := 0; 
@@ -952,7 +955,7 @@ destinationrelai integer := 0;
 departrelai integer := 0;
 
 BEGIN
-for o in (select distinct colis.destinationrelai, colis.departrelai /*into destinationrelai, departrelai*/ from transcolis join colis on transcolis.colis_id = colis.id where transcolis.siteecommerce_id = id_site )
+    for o in (select distinct colis.destinationrelai, colis.departrelai /*into destinationrelai, departrelai*/ from transcolis join colis on transcolis.colis_id = colis.id where transcolis.siteecommerce_id = id_site )
     loop 
         --dbms_output.put_line(o.destinationrelai);
        if (o.destinationrelai = 0 and o.departrelai = 0) then 
@@ -982,7 +985,7 @@ select* from facture;
 --Question 2
 /*CREATE OR REPLACE PROCEDURE genPaiementRelais()
 BEGIN
-SELECT COUNT
+SELECT COUNT 
 */
 
 --Question 3
@@ -1013,9 +1016,9 @@ end;
 /
 --select siteecommerce_id, estrecupere from transcolis where colis_id = 1 and iscurrent = 1;
 
+
 select calTarifColis(1) from dual;
 
---Question 5
 CREATE OR REPLACE FUNCTION parcoursRelai(id_colis integer) return sys_refcursor is 
 v_result SYS_REFCURSOR;
    BEGIN
@@ -1033,29 +1036,6 @@ select parcoursRelai(1) from dual;
 ------------------------------------
 --Les Triggers----------------------
 ------------------------------------
-DROP TABLE alertLivreur CASCADE CONSTRAINTS;
-
-CREATE TABLE alertLivreur (
-    id_colis    INTEGER NOT NULL,
-    nom_colis   CHAR(50),
-    id_livreur  INTEGER NOT NULL
-    );
-
-DELIMITER !
-CREATE OR REPLACE TRIGGER alertLivreurTrigger
-AFTER UPDATE OF date ON TransColis
-BEGIN
-    SELECT T.estLivre, C.nom, C.id, S.livreur_id
-    FROM TransColis T
-    JOIN Colis C ON T.Colis = C.id
-    JOIN "S'occuper" S ON T.id = S.TransColis_id;
-IF T.estLivre = 0
-THEN
-    INSERT INTO alertLivreur
-    VALUES (C.id, C.nom, S.livreur_id);
-END IF;
-END;
-DELIMITER ;
 
 
 

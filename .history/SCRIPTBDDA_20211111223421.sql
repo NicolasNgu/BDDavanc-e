@@ -108,8 +108,7 @@ CREATE TABLE colis (
     tarif                   INTEGER,
     listeadressescolis_id   INTEGER NOT NULL,
     departementdest         INTEGER,
-    destinationrelai        CHAR(1),
-    departrelai             CHAR(1)
+    destinationrelai        CHAR(1)
 );
 
 drop sequence col_seq;
@@ -251,10 +250,6 @@ ALTER TABLE "depend de" ADD CONSTRAINT relation_28_pk_ PRIMARY KEY ( typelivrais
 CREATE TABLE facture (
     id                 INTEGER NOT NULL,
     total              INTEGER,
-    totalR_R           INTEGER,
-    totalR_A           INTEGER,
-    totalA_R           INTEGER,
-    totalA_A           INTEGER,
     siteecommerce_id   INTEGER NOT NULL,
     estpayee           CHAR(1)
 );
@@ -702,30 +697,30 @@ insert into siteecommerce values(1,'Vinted',2229,0908070605,100,'Rue du Découve
 
 select * from siteecommerce;
 
-insert into facture values(1,0,0,0,0,0,1,0);
-insert into facture values(1,0,0,0,0,0,2,1);
-insert into facture values(1,0,0,0,0,0,3,1);
-insert into facture values(1,0,0,0,0,0,4,0);
-insert into facture values(1,0,0,0,0,0,5,0);
-insert into facture values(1,0,0,0,0,0,5,1);
-insert into facture values(1,0,0,0,0,0,7,0);
-insert into facture values(1,0,0,0,0,0,8,1);
-insert into facture values(1,0,0,0,0,0,9,1);
-insert into facture values(1,0,0,0,0,0,10,1);
+insert into facture values(1,0,1,0);
+insert into facture values(1,0,2,1);
+insert into facture values(1,0,3,1);
+insert into facture values(1,0,4,0);
+insert into facture values(1,0,5,0);
+insert into facture values(1,0,5,1);
+insert into facture values(1,0,7,0);
+insert into facture values(1,0,8,1);
+insert into facture values(1,0,9,1);
+insert into facture values(1,0,10,1);
 
 select * from facture;
 
 
-insert into colis values(1,'Ordinateur',60.0,2.0,1500,1,90,0,1);
-insert into colis values(1,'Clavier',30.0,0.5,120,2,91,0,0);
-insert into colis values(1,'Souris',10.0,0.1,30,2,92,0,1);
-insert into colis values(1,'Enceinte',20.0,0.8,80,1,93,1,1);
-insert into colis values(1,'Bureau',200.0,30.0,1000,1,94,1,0);
-insert into colis values(1,'Lit',250.0,50.0,800,1,95,0,0);
-insert into colis values(1,'CleUsb',50.0,10.0,1500,2,96,0,1);
-insert into colis values(1,'Chaise',80.0,1.0,50,3,97,1,1);
-insert into colis values(1,'Table',150.0,3.0,200,3,98,1,0);
-insert into colis values(1,'Four',50.0,2.0,400,4,99,1,0);
+insert into colis values(1,'Ordinateur',60.0,2.0,1500,1,90,0);
+insert into colis values(1,'Clavier',30.0,0.5,120,2,91,0);
+insert into colis values(1,'Souris',10.0,0.1,30,2,92,0);
+insert into colis values(1,'Enceinte',20.0,0.8,80,1,93,1);
+insert into colis values(1,'Bureau',200.0,30.0,1000,1,94,1);
+insert into colis values(1,'Lit',250.0,50.0,800,1,95,0);
+insert into colis values(1,'CleUsb',50.0,10.0,1500,2,96,0);
+insert into colis values(1,'Chaise',80.0,1.0,50,3,97,1);
+insert into colis values(1,'Table',150.0,3.0,200,3,98,1);
+insert into colis values(1,'Four',50.0,2.0,400,4,99,1);
 
 select * from colis;
 
@@ -824,19 +819,6 @@ insert into transite values(9,9);
 insert into transite values(10,10);
 
 select * from transite;
-
-insert into coordgps values(1,30,30,1);
-insert into coordgps values(1,40,40,2);
-insert into coordgps values(1,50,50,3);
-insert into coordgps values(1,60,60,4);
-insert into coordgps values(1,70,70,5);
-insert into coordgps values(1,80,80,6);
-insert into coordgps values(1,90,90,7);
-insert into coordgps values(1,95,95,8);
-insert into coordgps values(1,100,100,9);
-insert into coordgps values(1,120,120,10);
-
-select * from coordgps;
 
 ------------------------------------
 --Les Vues--------------------------
@@ -943,92 +925,17 @@ GROUP BY nom;*/
 ------------------------------------
 
 --Question 1
-CREATE OR REPLACE PROCEDURE genFactureClient(id_site INTEGER) IS
-totalRR integer := 0;
-totalAR INTEGER := 0; 
-totalRA INTEGER := 0; 
-totalAA INTEGER := 0; 
-destinationrelai integer := 0;
-departrelai integer := 0;
-
+/*CREATE OR REPLACE PROCEDURE genFactureClient()
 BEGIN
-for o in (select distinct colis.destinationrelai, colis.departrelai /*into destinationrelai, departrelai*/ from transcolis join colis on transcolis.colis_id = colis.id where transcolis.siteecommerce_id = id_site )
-    loop 
-        --dbms_output.put_line(o.destinationrelai);
-       if (o.destinationrelai = 0 and o.departrelai = 0) then 
-        totalAA := totalAA + 1;
-       end if;
-       if (o.destinationrelai = 1 and o.departrelai = 0) then 
-        totalAR := totalAR + 1;
-       end if;
-       if (o.destinationrelai = 0 and o.departrelai = 1) then 
-        totalRA := totalRA + 1;
-       end if;
-       if (o.destinationrelai = 1 and o.departrelai = 1) then 
-        totalAA := totalRR + 1;
-       end if;
-    end loop;
-    insert into facture values (1,totalAA + totalRA + totalAR + totalRR, totalRR, totalRA, totalAR, totalAA, id_site,0);
-    
-END;
-/ 
---
-
-EXEC genFactureClient(1);
-select* from facture;
-
-
+SELECT COUNT*/
 
 --Question 2
 /*CREATE OR REPLACE PROCEDURE genPaiementRelais()
 BEGIN
-SELECT COUNT
-*/
+SELECT COUNT*/
 
 --Question 3
-CREATE OR REPLACE FUNCTION calTarifColis(id_colis integer) return integer IS
-est_recupere integer := null;
---is_current integer := null;
-var_taille float := null;
-var_poids float := null;
-var_coefPoids float := null;
-var_coefTaille float := null;
-prix float := null;
-var_coefRelai float := null;
-var_idSite integer := null;
 
-
-begin 
-
-    select siteecommerce_id, estrecupere into var_idSite, est_recupere from transcolis where colis_id = id_colis and iscurrent = 1;
-    select coeftaille, coefpoids, coefrelai into var_coefTaille, var_coefPoids, var_coefRelai from contratsite where siteecommerce_id = var_idSite and encours = 1;
-    select taille, poids into var_taille, var_poids from colis where id = id_colis;
-    prix := var_poids * var_coefPoids + var_taille * var_coefTaille;
-    if(est_recupere = 1) then 
-        prix := prix - var_coefRelai;
-    end if;
-    return prix;
-    
-end; 
-/
---select siteecommerce_id, estrecupere from transcolis where colis_id = 1 and iscurrent = 1;
-
-select calTarifColis(1) from dual;
-
---Question 5
-CREATE OR REPLACE FUNCTION parcoursRelai(id_colis integer) return sys_refcursor is 
-v_result SYS_REFCURSOR;
-   BEGIN
-      OPEN v_result FOR
-         SELECT coordgps.coordx,
-                coordgps.coordy
-           FROM colis join transcolis on colis.id = transcolis.colis_id join coordgps on transcolis.id = coordgps.transcolis_id
-          WHERE transcolis.colis_id = id_colis;
-      RETURN v_result;
-    END;
-/
-
-select parcoursRelai(1) from dual;
 
 ------------------------------------
 --Les Triggers----------------------
